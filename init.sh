@@ -1,8 +1,11 @@
 #!/bin/bash
 echo 'Start init'
 
-echo 'Launch cron'
-service cron start
+if [ -z ${ROOT_PASSWORD} ]; then
+	echo "Use default password"
+else
+	echo "root:${ROOT_PASSWORD}" | chpasswd
+fi
 
 /usr/bin/supervisord
 

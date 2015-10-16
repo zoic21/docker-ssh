@@ -12,7 +12,6 @@ curl \
 wget \
 openssh-server \
 supervisor \
-cron \
 tar \
 sudo \
 htop \
