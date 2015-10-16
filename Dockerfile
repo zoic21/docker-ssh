@@ -34,5 +34,7 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 ####################################################################PHPMYADMIN#######################################################################################
 
+ADD init.sh /root/init.sh
+RUN chmod +x /root/init.sh
 CMD ["/root/init.sh"]
 EXPOSE 22
