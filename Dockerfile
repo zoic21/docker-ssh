@@ -32,7 +32,7 @@ RUN echo "root:${SHELL_ROOT_PASSWORD}" | chpasswd && \
 RUN mkdir -p /var/run/sshd /var/log/supervisor
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-####################################################################JEEDOM#######################################################################################
+####################################################################PHPMYADMIN#######################################################################################
 
 CMD ["/root/init.sh"]
 EXPOSE 22
