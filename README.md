@@ -1,3 +1,3 @@
 # Environment Variables
 
-docker run --name compile-enocean -v /todo:/root/.ssh jeedom/compilation-enocean
+docker run --name ssh -v /home/root/folder:/root zoic21/ssh
