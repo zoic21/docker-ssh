@@ -8,7 +8,7 @@ else
 	echo "root:${ROOT_PASSWORD}" | chpasswd
 fi
 
-if [ -f /root/scripts ]; then
+if [ -d /root/scripts ]; then
     cd /root/scripts
     git reset --hard HEAD
     git pull
