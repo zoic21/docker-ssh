@@ -35,6 +35,7 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ####################################################################PHPMYADMIN#######################################################################################
 
 ADD bashrc /root/.bashrc
+ADD profile /root/.profile
 ADD init.sh /root/init.sh
 RUN chmod +x /root/init.sh
 CMD ["/root/init.sh"]
