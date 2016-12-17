@@ -11,6 +11,7 @@ unzip \
 curl \
 wget \
 openssh-server \
+fail2ban \
 supervisor \
 tar \
 sudo \
