@@ -8,17 +8,16 @@ else
 	echo "root:${ROOT_PASSWORD}" | chpasswd
 fi
 
-if [ -f /root/helper ]; then
-    cd /root/helper
+if [ -f /root/scripts ]; then
+    cd /root/scripts
     git reset --hard HEAD
     git pull
 else
    cd /root
-   git clone --depth 1 https://github.com/jeedom/helper.git
+   git clone --depth 1 https://github.com/zoic21/scripts.git
 fi
 
-dos2unix /root/helper/ssh/connection.sh
-dos2unix /root/helper/ssh/multissh.sh
+find /root/scripts/shell -type f -exec dos2unix {} \;
 
 /usr/bin/supervisord
 
