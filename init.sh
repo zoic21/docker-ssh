@@ -17,7 +17,8 @@ else
    git clone --depth 1 https://github.com/zoic21/scripts.git
 fi
 
-find /root/scripts/shell -type f -exec dos2unix {} \;
+find /root/scripts/shell -iname "*.sh" -type f -exec dos2unix {} \;
+find /root/scripts/shell -iname "*.sh" -type f -exec chmod +x {} \;
 
 /usr/bin/supervisord
 
