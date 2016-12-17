@@ -9,7 +9,6 @@ wget \
 ntp \
 unzip \
 curl \
-wget \
 openssh-server \
 fail2ban \
 supervisor \

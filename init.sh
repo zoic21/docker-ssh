@@ -20,5 +20,8 @@ fi
 find /root/scripts/shell -iname "*.sh" -type f -exec dos2unix {} \;
 find /root/scripts/shell -iname "*.sh" -type f -exec chmod +x {} \;
 
+service rsyslog start
+service fail2ban start
+
 /usr/bin/supervisord
 
