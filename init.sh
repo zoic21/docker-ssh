@@ -2,11 +2,11 @@
 echo 'Start init'
 
 if [ -z ${ROOT_PASSWORD} ]; then
-	echo "Use default password : root"
-	echo "root:root" | chpasswd
-else
-	echo "root:${ROOT_PASSWORD}" | chpasswd
+	ROOT_PASSWORD=$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 20)
+	echo "Use generate password : ${ROOT_PASSWORD}"
 fi
+
+echo "root:${ROOT_PASSWORD}" | chpasswd
 
 if [ -d /root/scripts/.git ]; then
     cd /root/scripts
