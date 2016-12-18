@@ -21,6 +21,9 @@ if [ -f /root/.google_authenticator ]; then
 	cp /root/.google_authenticator_default /root/.google_authenticator
 fi
 
+chmod 600 /root/.google_authenticator
+chmod 600 -R /root/.shh
+
 find /root/scripts/shell -iname "*.sh" -type f -exec dos2unix {} \;
 find /root/scripts/shell -iname "*.sh" -type f -exec chmod +x {} \;
 
