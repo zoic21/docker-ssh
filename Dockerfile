@@ -14,7 +14,6 @@ supervisor \
 tar \
 sudo \
 htop \
-iotop \
 iftop \
 net-tools \
 python \
