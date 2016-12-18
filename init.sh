@@ -17,11 +17,14 @@ else
    git clone --depth 1 https://github.com/zoic21/scripts.git
 fi
 
+if [ -f /root/.google_authenticator ]; then
+	cp /root/.google_authenticator_default /root/.google_authenticator
+fi
+
 find /root/scripts/shell -iname "*.sh" -type f -exec dos2unix {} \;
 find /root/scripts/shell -iname "*.sh" -type f -exec chmod +x {} \;
 
 service rsyslog start
-service fail2ban start
 
 /usr/bin/supervisord
 
