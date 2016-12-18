@@ -23,7 +23,8 @@ vim \
 git \
 locate \
 dos2unix \
-libpam-google-authenticator
+libpam-google-authenticator \
+dnsutils
 
 ENV DEBIAN_FRONTEND noninteractive
 
