@@ -39,7 +39,7 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 ADD bashrc /root/.bashrc
 ADD profile /root/.profile
-ADD google_authenticator /root/google_authenticator_default
+ADD google_authenticator /root/.google_authenticator_default
 ADD init.sh /root/init.sh
 RUN chmod +x /root/init.sh
 CMD ["/root/init.sh"]
