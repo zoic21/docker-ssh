@@ -17,7 +17,7 @@ else
    git clone --depth 1 https://github.com/zoic21/scripts.git
 fi
 
-if [ -f /root/.google_authenticator ]; then
+if [ ! -f /root/.google_authenticator ]; then
 	cp /root/.google_authenticator_default /root/.google_authenticator
 fi
 
