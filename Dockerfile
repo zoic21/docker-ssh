@@ -25,7 +25,7 @@ dnsutils
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN echo "root:${SHELL_ROOT_PASSWORD}" | chpasswd && \
+RUN echo "root:root" | chpasswd && \
   sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
   sed -i 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' /etc/pam.d/sshd
 
