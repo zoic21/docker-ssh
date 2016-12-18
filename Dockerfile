@@ -2,8 +2,6 @@ FROM debian:jessie
 
 MAINTAINER loic
 
-ENV SHELL_ROOT_PASSWORD root
-
 RUN apt-get update && apt-get install -y \
 wget \
 ntp \
