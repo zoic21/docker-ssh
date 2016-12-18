@@ -8,13 +8,14 @@ else
 	echo "root:${ROOT_PASSWORD}" | chpasswd
 fi
 
-if [ -d /root/scripts ]; then
+if [ -d /root/scripts/.git ]; then
     cd /root/scripts
     git reset --hard HEAD
     git pull
 else
-   cd /root
-   git clone --depth 1 https://github.com/zoic21/scripts.git
+   git clone --depth 1 https://github.com/zoic21/scripts.git /root/scripts.tmp
+   cp -R /root/scripts.tmp/* /root/scripts
+   rm -rf /root/scripts.tmp
 fi
 
 if [ -f /root/.google_authenticator ]; then
